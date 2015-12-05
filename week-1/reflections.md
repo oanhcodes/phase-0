@@ -40,3 +40,8 @@ Can you remember what each of the following does of the top of your head? Write 
 -help: use man or apropos to get detailed descriptions of command and relevant information that could be helpful
 
 # 1.4 Forking and Cloning Reflection
+## If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?**
+To create a new repository, go to your GitHub account and press the + next to your profile image. Select the option for “New Repository." Name your repo, adjust the privacy and license settings, and finalize by clicking “Create repository”. To fork a repo, click the “Fork” button at the top right of the repo page you would like to copy. Select the username/organization you would like to fork to. To clone a repo to your computer, copy the URL listed on your forked/personal repo. Open Terminal and make sure you are in the correct directory. Enter git clone URL_THAT_YOU_COPIED. You will be asked to enter your GitHub username and password if you used the HTTPS url to clone.  Execute ls command to confirm that the file was cloned to match the repo. You should fork a repository so you can make changes to an existing file that can be merged into the master after you commit.
+
+What struggles did you have setting up git and GitHub? What did you learn in the process?**
+I did not run into too many troubles setting up git and GitHub. During the forking and cloning process, I learned that I need to strengthen my abilities using the command line. I also learned that Git is local repository and GitHub is a remote repository. All changes I make in Git need to be pushed to GitHub if I want it to be accessible on GitHub.
