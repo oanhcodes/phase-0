@@ -1,1 +1,1 @@
-![Alt text](/imgs/sitemap.jpg "Site Map")
+![Alt text](week-2/imgs/sitemap.jpg "Site Map")
