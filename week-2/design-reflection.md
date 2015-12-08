@@ -1,1 +1,1 @@
-![Alt text](/Users/oanhho/Phase0/phase-0/week-2/imgs/sitemap.jpg "Site Map")
+![Site Map](/phase-0/week-2/imgs/sitemap.jpg)
