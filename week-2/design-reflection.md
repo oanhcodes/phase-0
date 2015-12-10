@@ -1,4 +1,4 @@
-![Site Map](/week-2/imgs/sitemap.jpg)
+![Site Map](../week-2/imgs/sitemap.jpg)
 
 ##What are the 6 Phases of Web Design?
 
