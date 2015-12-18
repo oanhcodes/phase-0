@@ -36,7 +36,7 @@ I enjoyed this challenge because I like learning through trial and error. Making
 4. Make Equidistant
 ![make-equidistant](../chrome-devtools/imgs/make-equidistant.png)
 
-5. Sqaures 
+5. Squares 
 ![squares](../chrome-devtools/imgs/squares.png)
 
 6. Footer 
