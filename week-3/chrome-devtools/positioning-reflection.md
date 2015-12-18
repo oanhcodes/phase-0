@@ -24,6 +24,7 @@ Borders exists around every box. Margin exists outside the border. Margins can b
 I enjoyed this challenge because I like learning through trial and error. Making different changes to the same html/css files was a great way for us to practice and start over whenever we got stuck. It was very neat introduction to Chrome DevTools!
 
 **Chrome DevTool Images**
+
 1. Change Color 
 ![color](../chrome-devtools/imgs/change-colors.png)
 
