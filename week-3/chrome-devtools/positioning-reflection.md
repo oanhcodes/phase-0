@@ -25,29 +25,29 @@ I enjoyed this challenge because I like learning through trial and error. Making
 
 **Chrome DevTool Images**
 
-1. Change Color 
+Change Color 
 ![color](../chrome-devtools/imgs/change-colors.png)
 
-2. Column 
+Column 
 ![column](../chrome-devtools/imgs/column.png)
 
-3. Row 
+Row 
 ![row](../chrome-devtools/imgs/row.png)
 
-4. Make Equidistant
+Make Equidistant
 ![make-equidistant](../chrome-devtools/imgs/make-equidistant.png)
 
-5. Squares 
+Squares 
 ![squares](../chrome-devtools/imgs/squares.png)
 
-6. Footer 
+Footer 
 ![footer](../chrome-devtools/imgs/footer.png)
 
-7. Header 
+Header 
 ![header](../chrome-devtools/imgs/header.png)
 
-8. Sidebar 
+Sidebar 
 ![sidebar](../chrome-devtools/imgs/sidebar.png)
 
-9. Get Creative 
+Get Creative 
 ![creative](../chrome-devtools/imgs/get-creative.png)
