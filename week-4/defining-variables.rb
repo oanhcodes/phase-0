@@ -1,6 +1,6 @@
 #Solution Below
-first_name = "Linda"
-last_name = "Ho"
+first_name = 'Linda'
+last_name = 'Ho'
 age = 28
 
 puts first_name
