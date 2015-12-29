@@ -38,6 +38,11 @@ How do you run an RSpec file from the command line?
 
 What was confusing about this material? What made sense?
 	I ran into errors when defining methods because I added puts into the method which always returned nil. Once I removed the puts from the method and used it only before calling the method, the program worked. So far, basic arithmetic in Ruby makes a lot of sense to me.
+
+Here are links to my solutions:	
 	
+	https://github.com/oanhcodes/phase-0/tree/master/week-4/address
+
+	https://github.com/oanhcodes/phase-0/tree/master/week-4/math
 =end
 
