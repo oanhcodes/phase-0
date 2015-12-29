@@ -1,7 +1,7 @@
 # Analyze the Errors
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [by myself].
+# I spent [1.5] hours on this challenge.
 
 # --- error -------------------------------------------------------
 
@@ -11,8 +11,9 @@ cartmans_phrase = "Screw you guys " + "I'm going home."
 # --- error -------------------------------------------------------
 
 def cartman_hates(thing)
-  #while true
+  while true
     puts "What's there to hate about #{thing}?"
+  end
 end
 
 # This is a tricky error. The line number may throw you off.
@@ -26,9 +27,9 @@ end
 # 4. What additional information does the interpreter provide about this type of error?
 # There is an unexpected end of input rather than the expexted keyword_end.
 # 5. Where is the error in the code?
-# The error is actually on line 14 with the 'while true' statement
+# The error is located in the
 # 6. Why did the interpreter give you this error?
-# The syntax for the while statement is invalid. 
+# The syntax was invalid because there needs to be another end to close while statement. I added the missing end to fix the code.
 
 # --- error -------------------------------------------------------
 
@@ -171,13 +172,13 @@ require_relative = "cartmans_essay.md"
 # Write your reflection below as a comment.
 
 #Which error was the most difficult to read?
-#The first error is the most difficult to read because the line number was actually the last line in the file. 
+#The first error is the most difficult to read because the error kept pointing the the last line of the file. 
 
 #How did you figure out what the issue with the error was?
-#I used a trial and error technique.
+#I first used the trial and error technique to identify that the error stemmed from the while statement. After reading more of Chris Pine's book, I remembered that while loops must have an end statement.
 
 #Were you able to determine why each error message happened based on the code? 
-#I was able to figure out why all the errors messages happened except for the first syntax error. I am still trying to figure out why the error line number defaults to the end of the file. 
+#Yes, I was able to determine why each error message occured.
 
 #When you encounter errors in your future code, what process will you follow to help you debug?
 #I will look at the for where the error occured, figure out what type of error it is, and read all the additional information than can help me understand what I might need to change to fix the code. I will text the code with each change so I can see what works and what doesn't work.
