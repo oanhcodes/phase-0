@@ -22,13 +22,13 @@ puts 'You have got to be kidding me! ' + better_number.to_s + ' is a way better 
 
 =begin
 How do you define a local variable?
-	Variables are objects that have been assigned a name and are stored in your computer. The first character of a variable name must be a lowercased letter.
+	Variables are objects that have been assigned a name and are stored globally. The first character of a variable name must begin with a lowercased letter. Local variables live inside a method.
 
 How do you define a method?
 	Methods are "things that do stuff" to an object such as a string, integer, or float. 
 
 What is the difference between a local variable and a method?
-	Local variables are assigned names for objects in Ruby. Methods do things to objects. You can avoid repetition in your code if you build your own method.
+	Local variables are assigned names for objects located inside a method. Methods are a bundle of statements that do things. 
 
 How do you run a ruby program from the command line?
 	Once you are in right directory, you need to call ruby file_name.rb
