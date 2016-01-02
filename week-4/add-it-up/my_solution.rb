@@ -53,11 +53,18 @@ def sentence_maker(array)
   new_array = first_word.capitalize
   array.shift
   array.unshift(new_array)
-  p array.join(" ") + "."
+  return array.join(" ") + "."
 end
 
 sentence_maker(["an", "apple", "a", "day"])
 
 # 6. sentence_maker refactored solution
+def sentence_maker(array)
+  first_word = array[0]
+  new_array = first_word.capitalize
+  array[0].replace(new_array)
+  return array.join(" ") + "."
+end
 
+sentence_maker(["an", "apple", "a", "day"])
 
