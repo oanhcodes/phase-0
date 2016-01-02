@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.
 
-# I worked on this challenge [by myself Jenna ].
+# I worked on this challenge with Jenna Elamin.
 
 # 0. total Pseudocode
 # make sure all pseudocode is commented out!
