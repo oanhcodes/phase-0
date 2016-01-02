@@ -1,6 +1,6 @@
 # Factorial
 
-# I worked on this challenge [by myself and Jenna  ].
+# I worked on this challenge with Jenna Elamin.
 
 #Psuedocode
 # Define method called factorial that accepts (number) as its one argument
