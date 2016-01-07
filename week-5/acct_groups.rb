@@ -16,16 +16,16 @@
 
 def acct_groups (array)
   array.shuffle!
-  p group_size = array.length
+  group_size = array.length
   if group_size <= 5
-    p array
+   p array
   elsif group_size % 5 == 0 || group_size % 5 >= 3
-  	p array.each_slice(5).to_a
+   p array.each_slice(5).to_a
   elsif group_size % 4 == 0 || group_size % 4 == 3
-  	p array.each_slice(4).to_a
+   p array.each_slice(4).to_a
   else
-  	p array.shift(3)
-    p array.each_slice(5).to_a
+   p array.shift(3)
+   p array.each_slice(5).to_a
   end
 end
 
