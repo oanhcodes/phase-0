@@ -49,9 +49,7 @@ remove("lemonade", hash)
 update("ice_cream", 4, hash)
 pretty(hash)
 
-
-
-
+#Initial Solution
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -121,3 +119,26 @@ def pretty(hash)
     end
 end
 pretty(hash)
+
+=begin
+
+#Reflection
+#What did you learn about pseudocode from working on this challenge?
+Psuedocode is great for breaking down a problem. I did find it difficult at times to use non-technical to describe how we wanted to approach the certain solutions.
+
+#What are the tradeoffs of using Arrays and Hashes for this challenge?
+Hashes were great for returning information in pairs. Arrays were helpful to separate out lists that could be used to fill up elements in a hash.
+
+#What does a method return?
+A method returns whatever we ask it to. 
+
+#What kind of things can you pass into methods as arguments?
+Anything including other methods!
+
+#How can you pass information between methods?
+You can add it as an argument or call it within a method.
+
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+It is important to remember that local variables cannot be used outside the method, so creating objects outside a method are important if you want to reuse them.
+
+=end
