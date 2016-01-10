@@ -8,11 +8,14 @@
 
 # Input: new methods, instance variables, 
 # Output: integers
-# Steps: Create a method called initialize that accepts the number of sides as an argument
-# Make the number of sides a variable that can be used in multiple methods
+# Steps: Create a method called initialize that accepts the number of 
+sides as an argument
+# Make the number of sides a variable that can be used in multiple 
+methods
 #IF the number of sides is less than 1, return an ArgumentError message
 #Create a method named sides that returns the number of sides
-#Create a method that returns a random number between 1 and the number of sides
+#Create a method that returns a random number between 1 and the number 
+of sides
 
 # 1. Initial Solution
 
@@ -63,7 +66,8 @@ An ArgumentError gets raised when an argument is
 wrong/not valid. It is a way to show documentation to the user 
 explaining why an argument is not valid.
 
-#What new Ruby methods did you implement? What challenges and successes did you have in implementing them?
+#What new Ruby methods did you implement? What challenges and successes 
+did you have in implementing them?
 I used rand to generate a random number with a range between 1 
 and the number of sides. I did not have any challenges 
 implementing this method,especially after learning about and
