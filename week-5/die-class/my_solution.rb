@@ -59,15 +59,31 @@ end
 # 4. Reflection
 =begin
 #What is an ArgumentError and why would you use one?
+An ArgumentError gets raised when an argument is 
+wrong/not valid. It is a way to show documentation to the user 
+explaining why an argument is not valid.
 
 #What new Ruby methods did you implement? What challenges and successes did you have in implementing them?
+I used rand to generate a random number with a range between 1 
+and the number of sides. I did not have any challenges 
+implementing this method,especially after learning about and
+using instance variables!
 
 #What is a Ruby class?
+A Ruby class is a blueprint that is used to create
+objects. It defines what the object does and what it knows.
 
 #Why would you use a Ruby class?
+Ruby classes allow you to create a bundle of methods that can be 
+used to create the same type of objects. This saves a lot of 
+time and helps you avoid making redundancies.
 
 #What is the difference between a local variable and an instance variable?
+Local variables can only be used inside the method it was
+created in. Instance variables can be used anywhere within its 
+class.
 
 #Where can an instance variable be used?
-
+Instance variables can be used by any method, anywhere in the
+class it was created.
 =end
