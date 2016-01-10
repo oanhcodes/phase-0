@@ -124,10 +124,13 @@ pretty(hash)
 
 #Reflection
 #What did you learn about pseudocode from working on this challenge?
-Psuedocode is great for breaking down a problem. I did find it difficult at times to use non-technical to describe how we wanted to approach the certain solutions.
+Psuedocode is great for breaking down a problem. I did find it difficult at 
+times to use non-technical to describe how we wanted to approach the certain 
+solutions.
 
 #What are the tradeoffs of using Arrays and Hashes for this challenge?
-Hashes were great for returning information in pairs. Arrays were helpful to separate out lists that could be used to fill up elements in a hash.
+Hashes were great for returning information in pairs. Arrays were helpful to 
+separate out lists that could be used to fill up elements in a hash.
 
 #What does a method return?
 A method returns whatever we ask it to. 
@@ -139,6 +142,8 @@ Anything including other methods!
 You can add it as an argument or call it within a method.
 
 #What concepts were solidified in this challenge, and what concepts are still confusing?
-It is important to remember that local variables cannot be used outside the method, so creating objects outside a method are important if you want to reuse them.
+It is important to remember that local variables cannot be used outside the 
+method, so creating objects outside a method are important if you want to 
+reuse them.
 
 =end
