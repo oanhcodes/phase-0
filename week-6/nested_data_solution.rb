@@ -81,8 +81,22 @@ end
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
 
-nested_hash = {:outer_key => {:inner_key => "Winner!"}}
-p nested_hash[:outer_key][:inner_key]
+#Destructive method
+
+startup_names.map! do |element|
+  if element.kind_of?(Array)
+    element.map! do |inner_array|
+      if inner_array.kind_of?(Array)
+        inner_array.map! {|innermost_array| p innermost_array << "ly"}
+      else
+        p inner_array << "ly"
+    end 
+  end
+  else
+    p element << "ly"
+  end
+end
+end
 
 =begin
 What are some general rules you can apply to nested arrays?
