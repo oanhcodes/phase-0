@@ -62,10 +62,32 @@ game.solved?
 
 
 # Refactored Solution
+class GuessingGame
 
+  def initialize(answer)
+    @answer = answer
+  end
 
+  def guess(integer)
+  	@guess_number = integer
+  	if @guess_number == nil
+  		p nil
+  	elsif @guess_number > @answer 
+  		p :high
+  	elsif @guess_number < @answer
+  		p :low
+  	else
+  		p :correct
+  	end
+  end
 
+  def solved?
+  	@last_guess = guess(@guess_number)
+    @last_guess == :correct ? true : false #Ternary Operator
+  end
+end 
 
-
+game = GuessingGame.new(10)
+game.solved?
 
 # Reflection
