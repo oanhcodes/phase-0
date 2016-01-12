@@ -35,7 +35,9 @@ class GuessingGame
 
   def guess(integer)
   	@guess_number = integer
-  	if @guess_number > @answer
+  	if @guess_number == nil
+  		p nil
+  	elsif @guess_number > @answer
   		p :high
   	elsif @guess_number < @answer
   		p :low
@@ -43,10 +45,19 @@ class GuessingGame
   		p :correct
   	end
   end
+
+  def solved?
+  	@last_guess = guess(@guess_number)
+    unless @last_guess == :correct
+    	p FALSE
+    else
+    	p TRUE  
+  	end
+  end
 end 
 
 game = GuessingGame.new(10)
-game.guess(9)
+game.solved?
 
 
 
