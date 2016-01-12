@@ -14,6 +14,7 @@
 		-Intialize method will take an integer as input
 		-Create an instance variable named answer and set it equal to the integer
 	2. Create a method called guess that will take an integer as input
+		-Create an instance variable named guess_number and set it equal to the integer
 		-IF this integer is larger than answer, return high
 		-ESLIF this integer is lower than answer, return low
 		-ELSE return correct
@@ -27,13 +28,25 @@
 # Initial Solution
 
 class GuessingGame
+
   def initialize(answer)
-    # Your initialization code goes here
+    @answer = answer
   end
 
-  # Make sure you define the other required methods, too
-end
+  def guess(integer)
+  	@guess_number = integer
+  	if @guess_number > @answer
+  		p :high
+  	elsif @guess_number < @answer
+  		p :low
+  	else
+  		p :correct
+  	end
+  end
+end 
 
+game = GuessingGame.new(10)
+game.guess(9)
 
 
 
