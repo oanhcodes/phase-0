@@ -100,8 +100,21 @@ end
 
 =begin
 What are some general rules you can apply to nested arrays?
+1) Symbols have leading colons. This means they should be called like this :object.
+2) Hashes can be called with keys and Arrays with index numbers
+3) You can use .class method to identify the type of objects that are in the array
+4) Puts will iterate over all the inner arrays
+
 What are some ways you can iterate over nested arrays?
+The method we used was to first identify the types of collection objects that 
+were present. We did this by using the the method kind_of? to identify and 
+iterate on specific types of elements inside the nested array.
+
 Did you find any good new methods to implement or did you re-use one you were
 already familiar with? What was it and why did you decide that was a good option?
+We used the map! method to create a destructive method that would modify the 
+array we were given. We originally used the each method to iterate over the 
+array, however, the original array was returned since the changes weren't 
+maintained. Using the map! method solved this problem for us.
 =end
 
