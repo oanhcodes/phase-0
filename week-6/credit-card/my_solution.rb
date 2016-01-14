@@ -126,3 +126,21 @@ p new.check_card
 
 
 # Reflection
+=begin
+What was the most difficult part of this challenge for you and your pair?
+The most difficult part of the challenge for us was to double every other digit 
+starting from the very last digit. We knew that we should first to split the 
+integer up into single digits and then reverse the order so we could use the 
+returned array's index to iterate. We ended up using the each_index method to run 
+a code block that would double every other element.
+
+What new methods did you find to help you when you refactored?
+We decided to create a method called to_integer that would modify an array's 
+elements by converting them to integers. We called this method within the 
+check_card method twice. The each_index and the inject method were new.
+
+What concepts or learnings were you able to solidify in this challenge?
+The differences between local and instance variables. Integers cannot but split, 
+but strings can. And strings with number values cannot be added. The ! modifies 
+the original array. 
+=end
