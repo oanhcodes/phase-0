@@ -40,6 +40,12 @@ class BingoBoard
     @shuffled_letters = @bingo.split(//).shuffle
     p @random_number = @shuffled_letters[0]
   end
+
+  def random_number
+     @random_number = rand(1...100)
+    p @random_number
+  end
+
 end
 
 # Refactored Solution
@@ -56,6 +62,7 @@ board = [[47, 44, 71, 8, 88],
 new_game = BingoBoard.new(board)
 
 new_game.random_letter
+new_game.random_number
 
 
 #Reflection
