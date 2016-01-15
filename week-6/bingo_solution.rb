@@ -53,6 +53,33 @@ class BingoBoard
     p @bingo_call.join
   end
 
+  def check_column
+    #b = 0, i = 1, n = 2, g = 3, o = 4
+    
+    column = 0
+    
+    if @random_letter == "b"
+      column
+    elsif @random_letter == "i"
+      column += 1
+    elsif @random_letter == "n"
+      column += 2
+    elsif @random_letter == "g"
+      column += 3
+    else @random_letter == "o"
+      column += 4
+    end 
+      
+      @bingo_board.each do |element|
+      p column_array << element[column]
+      if column_array.include?(@random_number)
+        p true
+      else
+        p false
+      end
+    end
+  end
+      
 end
 
 # Refactored Solution
@@ -71,6 +98,7 @@ new_game = BingoBoard.new(board)
 new_game.random_letter
 new_game.random_number
 new_game.bingo_call
+new_game.check_column
 
 
 #Reflection
