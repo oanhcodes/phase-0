@@ -38,12 +38,19 @@ class BingoBoard
   def random_letter
     @bingo = "bingo"
     @shuffled_letters = @bingo.split(//).shuffle
-    p @random_number = @shuffled_letters[0]
+    p @random_letter = @shuffled_letters[0]
   end
 
   def random_number
      @random_number = rand(1...100)
     p @random_number
+  end
+
+  def bingo_call
+    @bingo_call = []
+    @bingo_call[0] = @random_letter
+    @bingo_call[1] = @random_number
+    p @bingo_call.join
   end
 
 end
@@ -63,6 +70,7 @@ new_game = BingoBoard.new(board)
 
 new_game.random_letter
 new_game.random_number
+new_game.bingo_call
 
 
 #Reflection
