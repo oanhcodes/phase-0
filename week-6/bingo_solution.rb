@@ -40,56 +40,60 @@ class BingoBoard
     @shuffled_letters = @bingo.split(//).shuffle
     p @random_letter = @shuffled_letters[0]
   end
-
+  
   def random_number
      @random_number = rand(1...100)
     p @random_number
   end
-
+  
   def bingo_call
     @bingo_call = []
     @bingo_call[0] = @random_letter
     @bingo_call[1] = @random_number
     p @bingo_call.join
   end
-
+  
   def check_column
     #b = 0, i = 1, n = 2, g = 3, o = 4
     
-    column = 0
+    @column = 0
+    @column_array = []
     
     if @random_letter == "b"
-      column
+      @column
     elsif @random_letter == "i"
-      column += 1
+      @column += 1
     elsif @random_letter == "n"
-      column += 2
+      @column += 2
     elsif @random_letter == "g"
-      column += 3
+      @column += 3
     else @random_letter == "o"
-      column += 4
+      @column += 4
     end 
       
-      @bingo_board.each do |element|
-      p column_array << element[column]
-      column_array.each_index do |index|
-        if column_array[index] == @random_number
-        column_array[index] = "X"
-        p column_array
+    @bingo_board.each do |element|
+      p @column_array << element[@column]
+      @column_array.each_index do |index|
+        if @column_array[index] == @random_number
+        @column_array[index] = "X"
+        p @column_array
         end
       end
     end
   end
-
-   def print_board
+  
+  def print_board
       @bingo_board[@column] = @column_array
-      p @bingo_board
+      p @bingo_board[0]
+      p @bingo_board[1]
+      p @bingo_board[2]
+      p @bingo_board[3]
+      p @bingo_board[4]
   end
 end
 
 # Refactored Solution
-
-
+    
 
 #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
 board = [[47, 44, 71, 8, 88],
@@ -104,6 +108,8 @@ new_game.random_letter
 new_game.random_number
 new_game.bingo_call
 new_game.check_column
+puts
+new_game.print_board
 
 
 #Reflection
