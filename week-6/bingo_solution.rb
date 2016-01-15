@@ -81,6 +81,12 @@ class BingoBoard
     end
   end
 
+   def print_board
+      @bingo_board[@column] = @column_array
+      p @bingo_board
+  end
+end
+
 # Refactored Solution
 
 
