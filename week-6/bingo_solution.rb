@@ -71,26 +71,29 @@ class BingoBoard
       @column += 4
     end 
       
-    @bingo_board.each do |element|
-      p @column_array << element[@column]
+     @bingo_board.each do |element|
+      @column_array << element[@column]
       @column_array.each_index do |index|
         if @column_array[index] == @random_number
         @column_array[index] = "X"
-        p @column_array
         end
       end
     end
+    
+    p @column_array
+   
   end
   
+  
   def print_board
-      @bingo_board[@column] = @column_array
-      p @bingo_board[0]
-      p @bingo_board[1]
-      p @bingo_board[2]
-      p @bingo_board[3]
-      p @bingo_board[4]
+    @bingo_board.each do |element|
+      if element.kind_of?(Array)
+        p element
+      end
+    end     
   end
 end
+
 
 # Refactored Solution
     
