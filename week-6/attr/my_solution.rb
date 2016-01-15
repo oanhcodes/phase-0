@@ -1,23 +1,42 @@
 #Attr Methods
 
-# I worked on this challenge [by myself, with:]
+# I worked on this challenge by myself
 
-# I spent [#] hours on this challenge.
+# I spent 3 hours including reading and researching on this challenge.
 
 # Pseudocode
 
-# Input:
-# Output:
-# Steps:
+# Input: Intialize methods, instance variables
+# Output: A puts statement
+# Steps: 
+=begin 
+-Intialize NameData class with an instance variable equal to my name
+-Intialize Greeting with an instance of NameData. 
+	-Make this a new instance variable
+-Create an instance method for Greetings that returns a greeting
+	-Call the method to retreive my name
+=end
 
 class NameData
-
+  attr_reader :name
+  
+  def initialize
+  @name = "Linda"
+  end
 end
-
 
 class Greetings
-
+  def initialize
+   @name_data = NameData.new
+  end
+  
+  def salutation
+    puts "#{@name_data.name}, it is so nice to meet you!"
+  end 
 end
+
+new_greeting = Greetings.new
+new_greeting.salutation # => Linda, it is so nice to meet you! 
 
 
 
@@ -74,7 +93,7 @@ Yes, this code is simpler than the last. The other methods for name and
 occupation should be refactored too to clean up the code.
 
 Release 4:
-See refactored code
+I refactored code with attr_accessor method.
 
 Release 5:
 See solution
