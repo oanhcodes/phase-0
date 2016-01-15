@@ -86,6 +86,12 @@ class BingoBoard
   
   
   def print_board
+    @bingo_board[0][@column] = @column_array[0]
+    @bingo_board[1][@column] = @column_array[1]
+    @bingo_board[2][@column] = @column_array[2]
+    @bingo_board[3][@column] = @column_array[3]
+    @bingo_board[4][@column] = @column_array[4]
+    
     @bingo_board.each do |element|
       if element.kind_of?(Array)
         p element
