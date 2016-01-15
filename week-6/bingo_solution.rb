@@ -72,15 +72,14 @@ class BingoBoard
       
       @bingo_board.each do |element|
       p column_array << element[column]
-      if column_array.include?(@random_number)
-        p true
-      else
-        p false
+      column_array.each_index do |index|
+        if column_array[index] == @random_number
+        column_array[index] = "X"
+        p column_array
+        end
       end
     end
   end
-      
-end
 
 # Refactored Solution
 
