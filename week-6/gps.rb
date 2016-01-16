@@ -30,3 +30,19 @@ p serving_size_calc("cookie", 10)
 p serving_size_calc("THIS IS AN ERROR", 5)
 
 #  Reflection
+=begin
+What did you learn about making code readable by working on this challenge?
+It is preferable to keep if statements to one line if possible. When refactoring, using additional methods can cut down on redundant code.
+
+Did you learn any new methods? What did you learn about them?
+I learned the has_key? method which will look at all the keys in a hash. This helped us 
+identify whether or not the item_to_make was in the library hash.
+
+What did you learn about accessing data in hashes? 
+You can get the value of the hash by calling the key using the [] method.
+
+What concepts were solidified when working through this challenge? 
+The reasoning to use or not to raise an argument error. While refactoring, my partner 
+reminded me we can use the [] method to get a value for a specific hash key.
+
+=end
