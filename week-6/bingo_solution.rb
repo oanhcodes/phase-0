@@ -28,7 +28,7 @@
   #fill in the outline here
 
 # Initial Solution
-
+=begin
 class BingoBoard
   def initialize(board)
     @bingo_board = board
@@ -95,14 +95,10 @@ class BingoBoard
     end 
   end
 end
+=end
 
-
-# Refactored Solution
-
-
-    
-
-#DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
+#DRIVER CODE FOR INITIAL SOLUTION (I.E. METHOD CALLS) GO BELOW THIS LINE
+=begin
 board = [[47, 44, 71, 8, 88],
         [22, 69, 75, 65, 73],
         [83, 85, 97, 89, 57],
@@ -130,5 +126,75 @@ new_game.bingo_call
 new_game.check_column
 puts
 new_game.print_board
+=end
+
+# Refactored Solution
+class BingoBoard
+  def initialize(board)
+    @bingo_board = board
+  end
+  
+  def bingo_call
+    @random_letter = ["B","I","N","G","O"].sample #new method
+    @random_number = rand(1...100)
+    @bingo_call = []
+    p @bingo_call[0,1] = [@random_letter, @random_number].join 
+  end
+  
+  def check_column
+    #b = 0, i = 1, n = 2, g = 3, o = 4
+    @column = 0
+    
+    if @random_letter == "B"
+      @column
+    elsif @random_letter == "I"
+      @column += 1
+    elsif @random_letter == "N"
+      @column += 2
+    elsif @random_letter == "G"
+      @column += 3
+    else @random_letter == "O"
+      @column += 4
+    end 
+      
+    @bingo_board.map! do |element|
+      if element[@column] == @random_number
+        element[@column] = "X"
+      end
+      p element
+    end 
+  end 
+end
+    
+
+#DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
+board = [[47, 44, 71, 8, 88],
+        [22, 69, 75, 65, 73],
+        [83, 85, 97, 89, 57],
+        [25, 31, 96, 68, 51],
+        [75, 70, 54, 80, 83]]
+
+new_game = BingoBoard.new(board)
+new_game.bingo_call
+new_game.check_column
+puts
+new_game.bingo_call
+new_game.check_column
+puts
+new_game.bingo_call
+new_game.check_column
+puts
+new_game.bingo_call
+new_game.check_column
+puts
+new_game.bingo_call
+new_game.check_column
+puts
+new_game.bingo_call
+new_game.check_column
+puts
+new_game.bingo_call
+new_game.check_column
+
 
 #Reflection
