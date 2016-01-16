@@ -127,6 +127,10 @@ new_game.bingo_call
 new_game.check_column
 puts
 new_game.print_board
+
+puts
+puts "...........End of Initial Solution Driver Code............"
+puts
 =end
 
 # Refactored Solution
@@ -143,27 +147,14 @@ class BingoBoard
   end
   
   def check_column
-    #b = 0, i = 1, n = 2, g = 3, o = 4
-    @column = 0
-    
-    if @random_letter == "B"
-      @column
-    elsif @random_letter == "I"
-      @column += 1
-    elsif @random_letter == "N"
-      @column += 2
-    elsif @random_letter == "G"
-      @column += 3
-    else @random_letter == "O"
-      @column += 4
-    end 
-      
-    @bingo_board.map! do |element|
-      if element[@column] == @random_number
-        element[@column] = "X"
-      end
-      p element
-    end 
+    string = ["B", "I", "N", "G", "O"]
+    @column = string.index(@random_letter)
+
+    @bingo_board.map! do |row|
+      if row[@column] == @random_number ? row[@column] = "X" : row[@column]
+      p row
+      end 
+    end
   end 
 end
     
