@@ -7,12 +7,12 @@
 # Outline:
 
 # Create a method to generate a letter ( b, i, n, g, o) and a number (1-100)
-  
-  #Create an array of strings with the letters in bingo
-  #Create a method that will randomly select one letter from the bingo string array
+  #Create a string named bingo
+  #Create a method that will randomly select one letter from string bingo
   #Create a method to randomly select a number between 1 and 100
     #Create an empty array 
       #Add random letter and number to this array
+      #Return a string with a letter and number
 
 # Check the called column for the number called.
   #The letters in bingo correspond to array index numbers 0-4
@@ -22,10 +22,11 @@
   #Create a method that will replace the value of number with 'x'
 
 # Display a column to the console
-  #fill in the outline here
+  #Create a new array called column_array
+  #Fill this array with the all the values in the same column as the random letter
 
 # Display the board to the console (prettily)
-  #fill in the outline here
+  #Print each array on its own line
 
 # Initial Solution
 =begin
