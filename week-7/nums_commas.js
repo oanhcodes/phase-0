@@ -15,7 +15,8 @@
 */
 
 //Initial Solution
-// function addComma(number) {
+
+// function separateComma(number) {
 //     var length = number.toString().length
 //     var num_of_commas = Math.floor(length/3)
 //     var num_array = number.toString().split("")
@@ -37,7 +38,7 @@
 
 // Refactored Solution
 
-function addComma(number) {
+function separateComma(number) {
     var length = number.toString().length
     var num_of_commas = Math.floor(length/3)
     var num_array = number.toString().split("")
@@ -65,13 +66,13 @@ function addComma(number) {
 
 // Your Own Tests (OPTIONAL)
 // This is driver code. Will add tests later if I have time!
-console.log(addComma(100))
-console.log(addComma(1000))
-console.log(addComma(10010))
-console.log(addComma(100101))
-console.log(addComma(1001012))
-console.log(addComma(1001012232))
-console.log(addComma(100101223432435325252))
+console.log(separateComma(100))
+console.log(separateComma(1000))
+console.log(separateComma(10010))
+console.log(separateComma(100101))
+console.log(separateComma(1001012))
+console.log(separateComma(1001012232))
+console.log(separateComma(100101223432435325252))
 
 
 /* Reflection
