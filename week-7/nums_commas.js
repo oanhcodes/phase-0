@@ -1,5 +1,3 @@
-
-
 // Separate Numbers with Commas in JavaScript **Pairing Challenge**
 
 // I worked on this challenge with: John Seo
@@ -66,6 +64,7 @@ function addComma(number) {
 
 
 // Your Own Tests (OPTIONAL)
+// This is driver code. Will add tests later if I have time!
 console.log(addComma(100))
 console.log(addComma(1000))
 console.log(addComma(10010))
@@ -75,5 +74,24 @@ console.log(addComma(1001012232))
 console.log(addComma(100101223432435325252))
 
 
+/* Reflection
 
-// Reflection
+// What was it like to approach the problem from the perspective of JavaScript? Did you approach the problem differently?
+I do not think our approach to breaking down the problem was different from 
+the perspective from Javascript. We did run into issues while writing code 
+that made us step back and think about the correct Javascript syntax. It took a lot of trial and error to figure out what methods were available, how to use the methods, and when to use {} and (). We made a big breakthrough after no being able to make the IF/ELSE statement work (because of missing {}) by remembering the Javascript switch/case statement.
+
+// What did you learn about iterating over arrays in JavaScript?
+We ran into problems with our IF/ELSE statements in our initial solution because only one ELSE IF statement was being recognized. Adding {} around each FOR statement was necessary to fix this problem. FOR statements need to incude 3 expressions. One expression initializes the loop, one checks to see if the loop needs continue running, and one updates the loop.
+
+// What was different about solving this problem in JavaScript?
+We forgot to add var in front our variables at times. That will take some getting used to. We also had to do a bit of trial and error to learn when to use {} and (). The way the FOR statement was formatted also took some getting used to.
+
+//What built-in methods did you find to incorporate in your refactored solution?
+We used the Math.floor method on a number we divided to return a whole number. We used the toString method to convert a number into a string. We used split to split the string into an array. We used splice to insert commas into an array. And finally, we used join to combine the contents in the array into a single string.
+
+We created a working solution I'm proud of, however, I have a feeling there may a better way to do it. I am lookinf forward to learn more and coming back to this!
+
+*/
+
+
