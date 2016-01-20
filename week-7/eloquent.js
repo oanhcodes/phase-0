@@ -52,8 +52,27 @@ for (var number = 1; number <= 100; number += 1) {
 // Functions
 
 // Complete the `minimum` exercise.
+function min(a, b) {
+  if (a < b)
+    return a;
+  else
+    return b;
+}
 
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
 
 
 // Data Structures: Objects and Arrays
 // Create an object called "me" that stores your name, age, 3 favorite foods, and a quirk below.
+
+var me = {
+  name: "Linda",
+  age: 28,
+  favorite_foods: ["Vietnamese Spicy Beef Noodle Soup", "French Silk Pie", "Tacos"],
+  quirk: "I like to watch people parallel park"
+}
+
+console.log(me)
