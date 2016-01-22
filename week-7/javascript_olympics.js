@@ -99,6 +99,15 @@ function Athlete(name, age, sport, quote){
     this.quote = quote;
     };
 
+/* Reflection
+What JavaScript knowledge did you solidify in this challenge?
+How to loop with FOR and making sure to return things since javascript does not 
+have implicit returns.
 
+What are constructor functions?
+Constructor functions create new javascript objects. Every object created with new is an instance of the constructor.
 
-// Reflection
+How are constructors different from Ruby classes (in your research)?
+Javascript constructors create new objects but do not define the object's behavior in the same function.
+*/
+
