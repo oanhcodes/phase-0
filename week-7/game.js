@@ -113,19 +113,18 @@
 
 
 // Refactored Code
-
-
 var game_board = [["-", "-", "-", "-"],
                   ["-", "-", "-", "-"],
                   ["-", "-", "-", "-"],
                   ["-", "-", "-", "-"]];
 
-
+//Function 1: Add value to posX and posY properties of an object
 function randomPos(object) {
   object.posX = Math.floor(Math.random() * 4);
   object.posY = Math.floor(Math.random() * 4);
 }
 
+//Object 1
 var bunny1 = {
   name: "Bunny 1",
   posX: "",
@@ -133,6 +132,7 @@ var bunny1 = {
   friendsWithBunnyfits: 0, 
 }
 
+//Object 2
 var bunny2 = {
   name: "Bunny 2",
   posX: "",
@@ -140,6 +140,7 @@ var bunny2 = {
   friendsWithBunnyfits: 0,
 }
 
+//Object 3
 var player = {
   name: "Player",
   posX: "",
@@ -147,28 +148,29 @@ var player = {
   bunnies: 0,
 }
 
-
+//Function 2: This is place objects on the board at random locations
 function play(array, x, y, x2, y2, x3, y3) {
   array[x][y] = "B1";
   array[x2][y2] = "B2";
   array[x3][y3] = "P";
-  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY) {
   array[x][y] = "<3";
   }
   console.log("Stop a bunny rendevous! The fate of the world depends on it!");
-  console.log("")
-  return array
+  console.log("");
+  return array;
 }
 
-//Driver Code
-
+//Give objects positions
 randomPos(bunny1);
 randomPos(bunny2);
 randomPos(player);
+
+//Place objects on the board and check if any land in the same spot
 console.log(play(game_board, bunny1.posX, bunny1.posY, bunny2.posX, bunny2.posY,
                  player.posX, player.posY));
 
-if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY) {
   bunny1.friendsWithBunnyfits = 1;
   bunny2.friendsWithBunnyfits = 1;
   console.log("");
@@ -182,15 +184,16 @@ if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
 else if((bunny1.posX === player.posX && bunny1.posY === player.posY) || (bunny2.posX === player.posX && bunny2.posY === player.posY)) {
   player.bunnies = 1;
   console.log("");
-  console.log("You caught a bunny and saved the day!");}
+  console.log("...............WINNER!...............");
+  console.log("You caught a bunny and saved the day!");
+  console.log("...............WINNER!...............");}
   console.log("");
 
-//Driver Code
+
+//Driver Code: Test to make sure objects are updating
 console.log(bunny1)
 console.log(bunny2)
 console.log(player)
-
-
 
 // Reflection
 //
