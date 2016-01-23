@@ -115,6 +115,82 @@ console.log(player)
 // Refactored Code
 
 
+var game_board = [["-", "-", "-", "-"],
+                  ["-", "-", "-", "-"],
+                  ["-", "-", "-", "-"],
+                  ["-", "-", "-", "-"]];
+
+var x = Math.floor(Math.random() * 4);
+var y = Math.floor(Math.random() * 4);
+var x2 = Math.floor(Math.random() * 4);
+var y2 = Math.floor(Math.random() * 4);
+var x3 = Math.floor(Math.random() * 4);
+var y3 = Math.floor(Math.random() * 4);
+
+var bunny1 = {
+  name: "Bunny 1",
+  posX: x,
+  posY: y,
+  friendsWithBunnyfits: 0,
+  
+}
+
+var bunny2 = {
+  name: "Bunny 2",
+  posX: x2,
+  posY: y2,
+  friendsWithBunnyfits: 0,
+}
+
+var player = {
+  name: "Player",
+  posX: x3,
+  posY: y3,
+  bunnies: 0,
+}
+
+
+function shuffle(array, x, y, x2, y2, x3, y3) {
+  array[x][y] = "B1";
+  array[x2][y2] = "B2";
+  array[x3][y3] = "P";
+  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+  array[x][y] = "<3";
+  }
+  console.log("Stop a bunny rendevous! The fate of the world depends on it!");
+  console.log("")
+  return array
+}
+
+
+console.log(shuffle(game_board, x, y, x2, y2, x3, y3));
+
+if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+  bunny1.friendsWithBunnyfits = 1;
+  bunny2.friendsWithBunnyfits = 1;
+  console.log("");
+  console.log("..............GAME OVER..............");
+  console.log("<3 A bunny rendevous has commenced <3");
+  console.log("....A bunny invasion is imminent!....");
+  console.log("..............GAME OVER..............");
+}
+  
+else if(bunny1.posX === player.posX && bunny1.posY === player.posY){
+  player.bunnies = 1;
+  console.log("");
+  console.log("You caught a Bunny 1 and saved the day!");}
+  
+else if(bunny2.posX === player.posX && bunny2.posY === player.posY){
+  player.bunnies = 1;
+  console.log("");
+  console.log("You caught a Bunny 2 and saved the day!");}
+
+
+console.log("")
+
+console.log(bunny1)
+console.log(bunny2)
+console.log(player)
 
 
 
