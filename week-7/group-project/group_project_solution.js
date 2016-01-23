@@ -5,3 +5,9 @@
 3. As a user, I want to find middle number in a list of numbers.
 
 */
+
+/* Summary
+
+The code passed all the tests. Together we created successful functions to find the sum, mean, and median of an array! Way to go!
+
+*/
