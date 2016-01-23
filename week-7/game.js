@@ -120,12 +120,16 @@ var game_board = [["-", "-", "-", "-"],
                   ["-", "-", "-", "-"],
                   ["-", "-", "-", "-"]];
 
-var x = Math.floor(Math.random() * 4);
-var y = Math.floor(Math.random() * 4);
-var x2 = Math.floor(Math.random() * 4);
-var y2 = Math.floor(Math.random() * 4);
-var x3 = Math.floor(Math.random() * 4);
-var y3 = Math.floor(Math.random() * 4);
+function randomNum() {
+  return Math.floor(Math.random() * 4);
+}
+
+var x = randomNum();
+var y = randomNum();
+var x2 = randomNum();
+var y2 = randomNum();
+var x3 = randomNum();
+var y3 = randomNum();
 
 var bunny1 = {
   name: "Bunny 1",
@@ -161,7 +165,6 @@ function shuffle(array, x, y, x2, y2, x3, y3) {
   console.log("")
   return array
 }
-
 
 console.log(shuffle(game_board, x, y, x2, y2, x3, y3));
 
