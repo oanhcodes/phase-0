@@ -34,6 +34,7 @@ var x3 = Math.floor(Math.random() * 4);
 var y3 = Math.floor(Math.random() * 4);
 
 var bunny1 = {
+  name: "Bunny 1",
   posX: x,
   posY: y,
   friendsWithBunnyfits: 0,
@@ -41,12 +42,14 @@ var bunny1 = {
 }
 
 var bunny2 = {
+  name: "Bunny 2",
   posX: x2,
   posY: y2,
   friendsWithBunnyfits: 0,
 }
 
 var player = {
+  name: "Player",
   posX: x3,
   posY: y3,
   bunnies: 0,
@@ -71,7 +74,8 @@ function moveBunny2(array, x, y) {
 
 function movePlayer(array, x, y) {
   array[x][y] = "P";
-    return array
+  console.log("");
+  return array
 }
 
 
@@ -92,12 +96,12 @@ if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
 else if(bunny1.posX === player.posX && bunny1.posY === player.posY){
   player.bunnies = 1;
   console.log("");
-  console.log("You caught a bunny 1 and saved the day!");}
+  console.log("You caught a Bunny 1 and saved the day!");}
   
 else if(bunny2.posX === player.posX && bunny2.posY === player.posY){
   player.bunnies = 1;
   console.log("");
-  console.log("You caught a bunny 2 and saved the day!");}
+  console.log("You caught a Bunny 2 and saved the day!");}
 
 
 console.log("")
@@ -105,6 +109,7 @@ console.log("")
 console.log(bunny1)
 console.log(bunny2)
 console.log(player)
+
 
 
 // Refactored Code
