@@ -6,15 +6,15 @@
 // Overall mission: Save your town from a bunny invasion! 
 // Goals: When you find a bunny, catch it to prevent a bunny rendevous!
 // Characters: Player
-// Objects: Player, bunny 1, bunny 2
-// Functions: place bunny 1, place bunny 2, place player
+// Objects: Player, Bunny 1, Bunny 2
+// Functions: Place bunny 1, Place bunny 2, Place player
 
 // Pseudocode
 // Create a game board 4 X 4 game board
 // Place two bunnies on the board in random locations
-// Place Molly on the board at a random location
-// For every move that Molly makes, shuffle the bunny locations
-// IF Molly's position is in the same location as the bunny, you win!
+// Place Player on the board at a random location
+// Shuffle bunny and player locations
+// IF Players's position is in the same location as the bunny, you win!
 // IF two bunnies land in the same position, you lose. Bunny invasion!
 // 
 //
@@ -36,47 +36,75 @@ var y3 = Math.floor(Math.random() * 4);
 var bunny1 = {
   posX: x,
   posY: y,
+  friendsWithBunnyfits: 0,
+  
 }
 
 var bunny2 = {
   posX: x2,
   posY: y2,
+  friendsWithBunnyfits: 0,
 }
 
 var player = {
   posX: x3,
   posY: y3,
+  bunnies: 0,
 }
 
 
-function place_bunny1(array, x, y) {
+function moveBunny1(array, x, y) {
   array[x][y] = "B1";
-  return "Bunny 1 has moved!"
+  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+  array[x][y] = "<3";
+  }
+  return "Catch the bunnies before they meet!";
 }
 
-function place_bunny2(array, x, y) {
+function moveBunny2(array, x, y) {
   array[x][y] = "B2";
-  return "Bunny 2 has moved!"
+  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+  array[x][y] = "<3";
+  }
+  return "The fate of the world depends on it!"
 }
 
-function place_molly(array, x, y) {
+function movePlayer(array, x, y) {
   array[x][y] = "P";
-  return array;
+    return array
 }
 
 
-console.log(place_bunny1(game_board, x, y));
-console.log(place_bunny2(game_board, x2, y2));
-console.log(place_molly(game_board, x3, y3));
+console.log(moveBunny1(game_board, x, y));
+console.log(moveBunny2(game_board, x2, y2));
+console.log(movePlayer(game_board, x3, y3));
 
 if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
-console.log("A bunny rendevous has commenced. The invasion is inevitable! GAME OVER");
+  bunny1.friendsWithBunnyfits = 1;
+  bunny2.friendsWithBunnyfits = 1;
+  console.log("");
+  console.log("..............GAME OVER..............");
+  console.log("<3 A bunny rendevous has commenced <3");
+  console.log("....A bunny invasion is imminent!....");
+  console.log("..............GAME OVER..............");
 }
+  
 else if(bunny1.posX === player.posX && bunny1.posY === player.posY){
-console.log("You caught a bunny and saved the day!");}
+  player.bunnies = 1;
+  console.log("");
+  console.log("You caught a bunny 1 and saved the day!");}
   
 else if(bunny2.posX === player.posX && bunny2.posY === player.posY){
-console.log("You caught a bunny and saved the day!");}
+  player.bunnies = 1;
+  console.log("");
+  console.log("You caught a bunny 2 and saved the day!");}
+
+
+console.log("")
+
+console.log(bunny1)
+console.log(bunny2)
+console.log(player)
 
 
 // Refactored Code
