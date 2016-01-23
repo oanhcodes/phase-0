@@ -7,16 +7,14 @@
 // Goals: When you find a bunny, catch it to prevent a bunny rendevous!
 // Characters: Player
 // Objects: Player, Bunny 1, Bunny 2
-// Functions: Place bunny 1, Place bunny 2, Place player
+// Functions: Add radom positions, Place bunny 1, bunny 2, and player on board
 
 // Pseudocode
 // Create a game board 4 X 4 game board
-// Place two bunnies on the board in random locations
-// Place Player on the board at a random location
-// Shuffle bunny and player locations
+// Assign position location for player, bunny 1, and bunny 2 
+// Place player, bunny 1, and bunny 2 on board
 // IF Players's position is in the same location as the bunny, you win!
 // IF two bunnies land in the same position, you lose. Bunny invasion!
-// 
 //
 
 // Initial Code
