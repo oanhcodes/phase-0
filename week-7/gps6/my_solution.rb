@@ -148,4 +148,32 @@ end
 
 
 #=======================================================================
-# Reflection Section
+=begin 
+Reflection Section
+What are the differences between the two different hash syntaxes shown in the 
+state_data file?
+One of the hashes uses the standard syntax with ==>, and the other uses 
+symbols. Symbol values always have the same object id. They do not get 
+reassigned each time they are used. This is handy when you want to use it 
+multiple times such as a key in a hash.
+
+What does require_relative do? How is it different from require?
+This is a way to link to another file to access data like test code. Require 
+relative does not require you to write the entire path to get to the file. If 
+you use require only, you would need to write the entire path.
+
+What are some ways to iterate through a hash?
+You can use the each method to iterate on the every key and value pair.
+
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+We did not need the arguments in order to call the method.
+
+What concept did you most solidify in this challenge?
+What the purpose of instance variables and method are. Why symbols are 
+different than variables. And the importance of understanding different scopes.
+
+=end
+
+
+
+
