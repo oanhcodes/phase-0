@@ -21,94 +21,94 @@
 
 // Initial Code
 
-var game_board = [["-", "-", "-", "-"],
-                  ["-", "-", "-", "-"],
-                  ["-", "-", "-", "-"],
-                  ["-", "-", "-", "-"]];
+// var game_board = [["-", "-", "-", "-"],
+//                   ["-", "-", "-", "-"],
+//                   ["-", "-", "-", "-"],
+//                   ["-", "-", "-", "-"]];
 
-var x = Math.floor(Math.random() * 4);
-var y = Math.floor(Math.random() * 4);
-var x2 = Math.floor(Math.random() * 4);
-var y2 = Math.floor(Math.random() * 4);
-var x3 = Math.floor(Math.random() * 4);
-var y3 = Math.floor(Math.random() * 4);
+// var x = Math.floor(Math.random() * 4);
+// var y = Math.floor(Math.random() * 4);
+// var x2 = Math.floor(Math.random() * 4);
+// var y2 = Math.floor(Math.random() * 4);
+// var x3 = Math.floor(Math.random() * 4);
+// var y3 = Math.floor(Math.random() * 4);
 
-var bunny1 = {
-  name: "Bunny 1",
-  posX: x,
-  posY: y,
-  friendsWithBunnyfits: 0,
+// var bunny1 = {
+//   name: "Bunny 1",
+//   posX: x,
+//   posY: y,
+//   friendsWithBunnyfits: 0,
   
-}
+// }
 
-var bunny2 = {
-  name: "Bunny 2",
-  posX: x2,
-  posY: y2,
-  friendsWithBunnyfits: 0,
-}
+// var bunny2 = {
+//   name: "Bunny 2",
+//   posX: x2,
+//   posY: y2,
+//   friendsWithBunnyfits: 0,
+// }
 
-var player = {
-  name: "Player",
-  posX: x3,
-  posY: y3,
-  bunnies: 0,
-}
-
-
-function moveBunny1(array, x, y) {
-  array[x][y] = "B1";
-  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
-  array[x][y] = "<3";
-  }
-  return "Catch the bunnies before they meet!";
-}
-
-function moveBunny2(array, x, y) {
-  array[x][y] = "B2";
-  if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
-  array[x][y] = "<3";
-  }
-  return "The fate of the world depends on it!"
-}
-
-function movePlayer(array, x, y) {
-  array[x][y] = "P";
-  console.log("");
-  return array
-}
+// var player = {
+//   name: "Player",
+//   posX: x3,
+//   posY: y3,
+//   bunnies: 0,
+// }
 
 
-console.log(moveBunny1(game_board, x, y));
-console.log(moveBunny2(game_board, x2, y2));
-console.log(movePlayer(game_board, x3, y3));
+// function moveBunny1(array, x, y) {
+//   array[x][y] = "B1";
+//   if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+//   array[x][y] = "<3";
+//   }
+//   return "Catch the bunnies before they meet!";
+// }
 
-if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
-  bunny1.friendsWithBunnyfits = 1;
-  bunny2.friendsWithBunnyfits = 1;
-  console.log("");
-  console.log("..............GAME OVER..............");
-  console.log("<3 A bunny rendevous has commenced <3");
-  console.log("....A bunny invasion is imminent!....");
-  console.log("..............GAME OVER..............");
-}
+// function moveBunny2(array, x, y) {
+//   array[x][y] = "B2";
+//   if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+//   array[x][y] = "<3";
+//   }
+//   return "The fate of the world depends on it!"
+// }
+
+// function movePlayer(array, x, y) {
+//   array[x][y] = "P";
+//   console.log("");
+//   return array
+// }
+
+
+// console.log(moveBunny1(game_board, x, y));
+// console.log(moveBunny2(game_board, x2, y2));
+// console.log(movePlayer(game_board, x3, y3));
+
+// if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
+//   bunny1.friendsWithBunnyfits = 1;
+//   bunny2.friendsWithBunnyfits = 1;
+//   console.log("");
+//   console.log("..............GAME OVER..............");
+//   console.log("<3 A bunny rendevous has commenced <3");
+//   console.log("....A bunny invasion is imminent!....");
+//   console.log("..............GAME OVER..............");
+// }
   
-else if(bunny1.posX === player.posX && bunny1.posY === player.posY){
-  player.bunnies = 1;
-  console.log("");
-  console.log("You caught a Bunny 1 and saved the day!");}
+// else if(bunny1.posX === player.posX && bunny1.posY === player.posY){
+//   player.bunnies = 1;
+//   console.log("");
+//   console.log("You caught a Bunny 1 and saved the day!");}
   
-else if(bunny2.posX === player.posX && bunny2.posY === player.posY){
-  player.bunnies = 1;
-  console.log("");
-  console.log("You caught a Bunny 2 and saved the day!");}
+// else if(bunny2.posX === player.posX && bunny2.posY === player.posY){
+//   player.bunnies = 1;
+//   console.log("");
+//   console.log("You caught a Bunny 2 and saved the day!");}
 
 
-console.log("")
+// console.log("")
 
-console.log(bunny1)
-console.log(bunny2)
-console.log(player)
+// console.log(bunny1)
+// console.log(bunny2)
+// console.log(player)
 
 
 
@@ -120,41 +120,35 @@ var game_board = [["-", "-", "-", "-"],
                   ["-", "-", "-", "-"],
                   ["-", "-", "-", "-"]];
 
-function randomNum() {
-  return Math.floor(Math.random() * 4);
-}
 
-var x = randomNum();
-var y = randomNum();
-var x2 = randomNum();
-var y2 = randomNum();
-var x3 = randomNum();
-var y3 = randomNum();
+function randomPos(object) {
+  object.posX = Math.floor(Math.random() * 4);
+  object.posY = Math.floor(Math.random() * 4);
+}
 
 var bunny1 = {
   name: "Bunny 1",
-  posX: x,
-  posY: y,
-  friendsWithBunnyfits: 0,
-  
+  posX: "",
+  posY: "",
+  friendsWithBunnyfits: 0, 
 }
 
 var bunny2 = {
   name: "Bunny 2",
-  posX: x2,
-  posY: y2,
+  posX: "",
+  posY: "",
   friendsWithBunnyfits: 0,
 }
 
 var player = {
   name: "Player",
-  posX: x3,
-  posY: y3,
+  posX: "",
+  posY: "",
   bunnies: 0,
 }
 
 
-function shuffle(array, x, y, x2, y2, x3, y3) {
+function play(array, x, y, x2, y2, x3, y3) {
   array[x][y] = "B1";
   array[x2][y2] = "B2";
   array[x3][y3] = "P";
@@ -166,7 +160,13 @@ function shuffle(array, x, y, x2, y2, x3, y3) {
   return array
 }
 
-console.log(shuffle(game_board, x, y, x2, y2, x3, y3));
+//Driver Code
+
+randomPos(bunny1);
+randomPos(bunny2);
+randomPos(player);
+console.log(play(game_board, bunny1.posX, bunny1.posY, bunny2.posX, bunny2.posY,
+                 player.posX, player.posY));
 
 if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
   bunny1.friendsWithBunnyfits = 1;
@@ -176,25 +176,19 @@ if(bunny1.posX === bunny2.posX && bunny1.posY === bunny2.posY){
   console.log("<3 A bunny rendevous has commenced <3");
   console.log("....A bunny invasion is imminent!....");
   console.log("..............GAME OVER..............");
+  console.log("");
 }
   
-else if(bunny1.posX === player.posX && bunny1.posY === player.posY){
+else if((bunny1.posX === player.posX && bunny1.posY === player.posY) || (bunny2.posX === player.posX && bunny2.posY === player.posY)) {
   player.bunnies = 1;
   console.log("");
-  console.log("You caught a Bunny 1 and saved the day!");}
-  
-else if(bunny2.posX === player.posX && bunny2.posY === player.posY){
-  player.bunnies = 1;
+  console.log("You caught a bunny and saved the day!");}
   console.log("");
-  console.log("You caught a Bunny 2 and saved the day!");}
 
-
-console.log("")
-
+//Driver Code
 console.log(bunny1)
 console.log(bunny2)
 console.log(player)
-
 
 
 
