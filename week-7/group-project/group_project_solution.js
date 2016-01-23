@@ -8,6 +8,7 @@
 
 /* Summary
 
-The code passed all the tests. Together we created successful functions to find the sum, mean, and median of an array! Way to go!
+The code passed all the tests. Together we created successful functions to find
+the sum, mean, and median of an array! We did what the user requested. Way to go!
 
 */

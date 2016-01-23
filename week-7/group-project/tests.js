@@ -1,7 +1,7 @@
 // Add the finished solution here when you receive it.
 
 //Refacoring : Person 5
-//Create a Function that accept a list of numbers and add it up.
+//As a user, I want to create a function that accept a list of numbers and add it up.
 function sum(array) {
  //Create an empty container that will be our total number.
 var total = 0;
@@ -13,7 +13,7 @@ for (var i = 0; i < array.length; i++){
 return total;
 };
 
-//Create a Function that will give us the average of a list of numbers.
+//As a user, I want to create a function that will give us the average of a list of numbers.
 function mean(array) {
  //Create an empty container that is going to contain our total number of things added from our list.
 var total = 0;
@@ -25,7 +25,7 @@ for (var i = 0; i < array.length; i++){
 return total/(array.length);
 }
 
-//Create a function that will give us the median of numbers from a list
+//As a user, I want to create a function that will give us the median of numbers from a list
 function median(array) {
  //Sort our list from lowest to highest.
 function sortNumber(a,b) {
