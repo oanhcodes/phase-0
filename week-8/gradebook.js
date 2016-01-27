@@ -8,6 +8,51 @@ variables match (i.e., 'Joseph' is the first element in students; his scores are
 Do not alter the students and scores code.
 */
 
+// var students = ["Joseph", "Susan", "William", "Elizabeth"]
+
+// var scores = [ [80, 70, 70, 100],
+//                [85, 80, 90, 90],
+//                [75, 70, 80, 75],
+//                [100, 90, 95, 85] ]
+
+
+// // __________________________________________
+// // Write your code below.
+// var gradebook = {}
+
+// gradebook.Joseph = new Object
+// gradebook.Susan = new Object
+// gradebook.William = new Object
+// gradebook.Elizabeth = new Object  
+
+// gradebook.Joseph.testScores = scores[0]
+// gradebook.Susan.testScores = scores[1]
+// gradebook.William.testScores = scores[2]
+// gradebook.Elizabeth.testScores = scores[3]
+
+// gradebook.addScore = function(name, score) {
+//   gradebook[name]["testScores"].push(score)
+// }
+
+// gradebook.getAverage = function(name) {
+//   return average(gradebook[name]["testScores"])
+// }
+
+// var average = function(array){
+//  var total = 0
+//  for(var x in array) {
+//    total += array[x]
+//    var avg = total/array.length
+//  }
+//   return avg
+// }
+
+// console.log(average(gradebook["Joseph"]["testScores"]))
+
+// // __________________________________________
+// // Refactored Solution
+
+
 var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
 var scores = [ [80, 70, 70, 100],
@@ -15,40 +60,43 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
+var gradebook = {}
 
+for(var i in students) {
+  gradebook[students[i]] = new Object;
+  gradebook[students[i]].testScores = scores[i];
+}
 
+gradebook.addScore = function(name, score) {
+  gradebook[name]["testScores"].push(score)
+}
 
+gradebook.getAverage = function(name) {
+  return average(gradebook[name]["testScores"])
+}
 
+function average(array) {
+ var total = 0
+ for(var x in array) {
+   total += array[x]
+   var avg = total/array.length
+ }
+  return avg  
+} 
+  
 
 // __________________________________________
-// Write your code below.
+/* Reflect
+What did you learn about adding functions to objects?
+I learned that you cannot use .notation when calling the argument values. The value needs to be in a bracket.
 
+How did you iterate over nested arrays in JavaScript?
+It took a lot of trial and error for us to figure it out. To iterate over a nested array, we needed to nest the properties of an object inside eachother using brackets. 
 
+Were there any new methods you were able to incorporate? If so, what were they and how did they work?
+We did not use anything new. We used push to add a new score to an existing array.
 
-
-
-
-
-
-// __________________________________________
-// Refactored Solution
-
-
-
-
-
-
-
-
-// __________________________________________
-// Reflect
-
-
-
-
-
-
-
+*/
 
 
 // __________________________________________
