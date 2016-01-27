@@ -393,3 +393,28 @@ Pacific      Washington
 North Pacif  Alaska     
 Tropical Pa  Hawaii     
 
+##Release 6: Your Own Schema
+![outfit_schema](imgs/outfit_schema.png)
+
+##Reflection:
+###What are databases for?
+Databases store and organize data into tables made up of columns (fields/
+properties) and rows (records/instances). A well designed database removes 
+redundancies and allows for easy storage and retrieval of selected data. 
+
+###What is a one-to-many relationship?
+One-to-may relationships are represented by more than one table. They refer 
+to relationships where one database belongs to the second database and the 
+second database belongs to many. For instance, a class will be taught by one 
+instructor. The instructor may teach many classes.
+
+###What is a primary key? What is a foreign key? How can you determine which is which?
+A primary key is a unique identifier for every record/instance of the table. 
+Primary keys should never be duplicated on a table. Good examples are SSN 
+and CustomerID numbers. A foreign key references a primary key in a joined 
+parent table. Tables can have mutiple foreign keys but only one primary key.
+
+###How can you select information out of a SQL database? What are some general guidelines for that?
+SQL is not case sensitive, however it is best practice to type SQL keywords 
+in upper-case. Each SQL statement requires a semicolon at the end. To select 
+all column fields, you can use *. 
