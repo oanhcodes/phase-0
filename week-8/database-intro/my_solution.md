@@ -61,17 +61,18 @@ id          state_name  population_density  population  region_id
 SELECT * FROM regions;
 id          region_name
 ----------  -----------
-1           New England
-2           Mid-Atlanti
-3           South Atlan
-4           East North 
-5           East South 
-6           West North 
-7           West South 
+1           New England  
+2           Mid-Atlanti  
+3           South Atlan  
+4           East North   
+5           East South   
+6           West North   
+7           West South   
 8           Mountain   
 9           Pacific    
-10          North Pacif
-11          Tropical Pa
+10          North Pacif  
+11          Tropical Pa  
+
 
 ##3. Select the state_name and population for all states.
 
@@ -195,10 +196,10 @@ Wyoming     576412
 
 SELECT state_name FROM states WHERE region_id = 7;
 
-state_name
+######state_name  
 ----------
 Arkansas  
-Louisiana 
+Louisiana  
 Oklahoma  
 Texas    
 
@@ -253,8 +254,7 @@ Washington  10357.0
 
 SELECT state_name FROM states WHERE population < 1500000
 AND population > 1000000;
-
-state_name
+######state_name 
 ----------
 Hawaii    
 Maine     
@@ -266,7 +266,7 @@ Rhode Isla
 
 SELECT state_name, region_id FROM states ORDER BY region_id ASC;
 
-state_name   region_id 
+######state_name   region_id 
 -----------  ----------
 Connecticut  1         
 Maine        1         
@@ -324,12 +324,12 @@ Hawaii       11
 
 SELECT region_name FROM regions WHERE region_name LIKE '%Central%';
 
-region_name       
+######region_name      
 ------------------
-East North Central
-East South Central
-West North Central
-West South Central
+East North Central     
+East South Central     
+West North Central     
+West South Central     
 
 ##10. Select the region_name and the state_name for all states and regions in ascending order by region_id. Refer to the region by name. (This will involve joining the tables).
 
@@ -341,24 +341,24 @@ ORDER BY states.region_id ASC;
 
 region_name  state_name 
 -----------  -----------
-New England  Connecticut
+New England  Connecticut      
 New England  Maine      
-New England  Massachuset
-New England  New Hampshi
-New England  Rhode Islan
+New England  Massachuset      
+New England  New Hampshi      
+New England  Rhode Islan      
 New England  Vermont    
-Mid-Atlanti  New Jersey 
+Mid-Atlanti  New Jersey       
 Mid-Atlanti  New York   
-Mid-Atlanti  Pennsylvani
+Mid-Atlanti  Pennsylvani      
 South Atlan  Delaware   
 South Atlan  Florida    
 South Atlan  Georgia    
 South Atlan  Maryland   
-South Atlan  North Carol
-South Atlan  South Carol
+South Atlan  North Carol      
+South Atlan  South Carol      
 South Atlan  Virginia   
-South Atlan  Washington,
-South Atlan  West Virgin
+South Atlan  Washington,      
+South Atlan  West Virgin      
 East North   Illinois   
 East North   Indiana    
 East North   Michigan   
@@ -366,15 +366,15 @@ East North   Ohio
 East North   Wisconsin  
 East South   Alabama    
 East South   Kentucky   
-East South   Mississippi
+East South   Mississippi      
 East South   Tennessee  
 West North   Iowa       
 West North   Kansas     
 West North   Minnesota  
 West North   Missouri   
 West North   Nebraska   
-West North   North Dakot
-West North   South Dakot
+West North   North Dakot      
+West North   South Dakot      
 West South   Arkansas   
 West South   Louisiana  
 West South   Oklahoma   
@@ -384,12 +384,12 @@ Mountain     Colorado
 Mountain     Idaho      
 Mountain     Montana    
 Mountain     Nevada     
-Mountain     New Mexico 
+Mountain     New Mexico       
 Mountain     Utah       
 Mountain     Wyoming    
-Pacific      California 
+Pacific      California       
 Pacific      Oregon     
-Pacific      Washington 
+Pacific      Washington       
 North Pacif  Alaska     
 Tropical Pa  Hawaii     
 
