@@ -71,7 +71,106 @@ iterate through votes objects
   push to votecount.president[bob] = 3
 */
 // __________________________________________
-// Initial Solution
+// // Initial Solution
+// var presidentVotes = [];
+// var vicePresidentVotes = [];
+// var secretary = [];
+// var treasurer = [];
+
+// for (var key in votes) {
+//    if (votes.hasOwnProperty(key)) {
+//       var obj = votes[key];
+//         presidentVotes.push(obj.president);
+//         vicePresidentVotes.push(obj.vicePresident);
+//         secretary.push(obj.secretary);
+//         treasurer.push(obj.treasurer);
+//       }
+// }
+  
+   
+// for(var i = 0; i < presidentVotes.length; i++) {
+//       if(!voteCount.president[presidentVotes[i]]) {
+//         voteCount.president[presidentVotes[i]] = 0;
+//         voteCount.president[presidentVotes[i]]++;
+//       }
+//       else {
+//         voteCount.president[presidentVotes[i]]++
+//       }   
+// }
+
+
+// for(var i = 0; i < vicePresidentVotes.length; i++) {
+//       if(!voteCount.vicePresident[vicePresidentVotes[i]]) {
+//         voteCount.vicePresident[vicePresidentVotes[i]] = 0;
+//         voteCount.vicePresident[vicePresidentVotes[i]]++;
+//       }
+//       else {
+//         voteCount.vicePresident[vicePresidentVotes[i]]++
+//       }   
+// }
+
+
+// for(var i = 0; i < secretary.length; i++) {
+//       if(!voteCount.secretary[secretary[i]]) {
+//         voteCount.secretary[secretary[i]] = 0;
+//         voteCount.secretary[secretary[i]]++;
+//       }
+//       else {
+//         voteCount.secretary[secretary[i]]++
+//       }   
+// }
+
+// for(var i = 0; i < treasurer.length; i++) {
+//       if(!voteCount.treasurer[treasurer[i]]) {
+//         voteCount.treasurer[treasurer[i]] = 0;
+//         voteCount.treasurer[treasurer[i]]++;
+//       }
+//       else {
+//         voteCount.treasurer[treasurer[i]]++
+//       }   
+// }
+
+
+// var presidentTally = voteCount.president;
+// var vicePresidentTally = voteCount.vicePresident;
+// var secretaryTally = voteCount.secretary;
+// var treasurerTally = voteCount.treasurer;
+
+
+// var sortedPresVotes = [];
+// for(var key in presidentTally) {
+//   sortedPresVotes.push([key, presidentTally[key]]);
+//   sortedPresVotes.sort(function(a, b) {return b[1] - a[1]})
+// }
+   
+// var sortedVicePresVotes = [];
+// for(var key in vicePresidentTally) {
+//   sortedVicePresVotes.push([key, vicePresidentTally[key]]);
+//   sortedVicePresVotes.sort(function(a, b) {return b[1] - a[1]})
+// }
+   
+// var sortedSecretaryVotes = [];
+// for(var key in secretaryTally) {
+//   sortedSecretaryVotes.push([key, secretaryTally[key]]);
+//   sortedSecretaryVotes.sort(function(a, b) {return b[1] - a[1]})
+// }
+   
+// var sortedTreasurerVotes = [];
+// for(var key in treasurerTally) {
+//   sortedTreasurerVotes.push([key, treasurerTally[key]]);
+//   sortedTreasurerVotes.sort(function(a, b) {return b[1] - a[1]})
+// }
+
+
+// officers.president = sortedPresVotes[0][0]
+// officers.vicePresident = sortedVicePresVotes[0][0]
+// officers.secretary = sortedSecretaryVotes[0][0]
+// officers.treasurer = sortedTreasurerVotes[0][0]
+// __________________________________________
+// Refactored Solution
+
+
+
 var presidentVotes = [];
 var vicePresidentVotes = [];
 var secretary = [];
@@ -136,41 +235,29 @@ var vicePresidentTally = voteCount.vicePresident;
 var secretaryTally = voteCount.secretary;
 var treasurerTally = voteCount.treasurer;
 
-
 var sortedPresVotes = [];
-for(var key in presidentTally) {
-  sortedPresVotes.push([key, presidentTally[key]]);
-  sortedPresVotes.sort(function(a, b) {return b[1] - a[1]})
-}
-   
 var sortedVicePresVotes = [];
-for(var key in vicePresidentTally) {
-  sortedVicePresVotes.push([key, vicePresidentTally[key]]);
-  sortedVicePresVotes.sort(function(a, b) {return b[1] - a[1]})
-}
-   
 var sortedSecretaryVotes = [];
-for(var key in secretaryTally) {
-  sortedSecretaryVotes.push([key, secretaryTally[key]]);
-  sortedSecretaryVotes.sort(function(a, b) {return b[1] - a[1]})
-}
-   
 var sortedTreasurerVotes = [];
-for(var key in treasurerTally) {
-  sortedTreasurerVotes.push([key, treasurerTally[key]]);
-  sortedTreasurerVotes.sort(function(a, b) {return b[1] - a[1]})
+
+function sort(array1,array2) {
+  for(var key in array2) {
+    array1.push([key, array2[key]]);
+    array1.sort(function(a,b){return b[1] - a[1]})
+  }
+  return array1
 }
+
+sort(sortedPresVotes, presidentTally)
+sort(sortedVicePresVotes, vicePresidentTally)
+sort(sortedTreasurerVotes, treasurerTally)
+sort(sortedSecretaryVotes, secretaryTally)
 
 
 officers.president = sortedPresVotes[0][0]
 officers.vicePresident = sortedVicePresVotes[0][0]
 officers.secretary = sortedSecretaryVotes[0][0]
 officers.treasurer = sortedTreasurerVotes[0][0]
-// __________________________________________
-// Refactored Solution
-
-
-
 
 
 
