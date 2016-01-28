@@ -72,7 +72,6 @@ iterate through votes objects
 */
 // __________________________________________
 // Initial Solution
-
 var presidentVotes = [];
 var vicePresidentVotes = [];
 var secretary = [];
@@ -81,16 +80,12 @@ var treasurer = [];
 for (var key in votes) {
    if (votes.hasOwnProperty(key)) {
       var obj = votes[key];
-     presidentVotes.push(obj.president);
-     vicePresidentVotes.push(obj.vicePresident);
-     secretary.push(obj.secretary);
-     treasurer.push(obj.treasurer);
-        for(var i = 0; i < obj.length; i++) {
-          var ballot = obj[pre];
-          console.log(ballot)
-       }
-         }
-   }
+        presidentVotes.push(obj.president);
+        vicePresidentVotes.push(obj.vicePresident);
+        secretary.push(obj.secretary);
+        treasurer.push(obj.treasurer);
+      }
+}
   
    
 for(var i = 0; i < presidentVotes.length; i++) {
@@ -166,47 +161,11 @@ for(var key in treasurerTally) {
   sortedTreasurerVotes.sort(function(a, b) {return b[1] - a[1]})
 }
 
+
 officers.president = sortedPresVotes[0][0]
 officers.vicePresident = sortedVicePresVotes[0][0]
 officers.secretary = sortedSecretaryVotes[0][0]
 officers.treasurer = sortedTreasurerVotes[0][0]
-
-
-
-
-
-// var counter = 0;
-// var counter2 = 0;
-// var counter3 = 0;
-// var counter4 = 0;
-
-
-// for (var key in votes) {
-//   if (votes.hasOwnProperty(key)) {
-//     var obj = votes[key];
-//       if (obj.president === 'Bob') {
-//         counter += 1;
-//         // voteCount.president['Bob'] = counter 
-//       }
-//       else if (obj.vicePresident === 'Bob') {
-//         counter2 += 1;
-//       }
-//       else if (obj.secretary === 'Bob') {
-//         counter3 += 1;
-//       }
-//       else if (obj.treasurer === 'Bob') {
-//         counter4 += 1;
-//       }
-//   }
-
-//    voteCount.president['Bob'] = counter;
-//    voteCount.vicePresident['Bob'] = counter2;
-//    voteCount.secretary['Bob'] = counter3;
-//    voteCount.treasurer['Bob'] = counter4;
-// }
-
-
-
 // __________________________________________
 // Refactored Solution
 
