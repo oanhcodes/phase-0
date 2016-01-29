@@ -263,12 +263,27 @@ officers.treasurer = sortedTreasurerVotes[0][0]
 
 // __________________________________________
 // Reflection
+/*
+In the reflection section in your "tally_votes.js" file, answer the 
+following questions:
+
+What did you learn about iterating over nested objects in JavaScript?
+That it is much trickier than it is in Ruby! One thing I learned is that 
+when calling specific properties, you need to use .property or ["property"]. 
+The property name needs to be in quotes or else it will be undefined.
+
+Were you able to find useful methods to help you with this?
+The .sort method helped me sort the tallied votes. This made it possible for 
+me to push the name of the winning candidate into the officers object. 
+
+What concepts were solidified in the process of working through this 
+challenge?
+The differences between using the dot vs. bracket notation to retrieve 
+poperties in a nested element.
 
 
 
-
-
-
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 
