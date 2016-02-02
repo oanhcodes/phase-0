@@ -41,6 +41,12 @@ function remove_item(item, object) {
   return grocery_list;
 }
 
+function update_item_num(item, quantity, object) {
+  object[item] = quantity;
+  return grocery_list;
+}
+
 console.log(create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list));
 console.log(add_item("Chocolate", 2, grocery_list));
-console.log(remove_item("Apples", grocery_list))
+console.log(remove_item("Apples", grocery_list));
+console.log(update_item_num("Bananas", 5, grocery_list))
