@@ -47,6 +47,10 @@ function update_item_num(item, quantity, object) {
 }
 
 console.log(create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list));
-console.log(add_item("Chocolate", 2, grocery_list));
-console.log(remove_item("Apples", grocery_list));
-console.log(update_item_num("Bananas", 5, grocery_list))
+console.log(add_item("Lemonade", 2, grocery_list));
+console.log(add_item("Tomatoes", 3, grocery_list));
+console.log(add_item("Onions", 1, grocery_list));
+console.log(add_item("Ice Cream", 4, grocery_list));
+console.log(remove_item("Lemonade", grocery_list));
+console.log(update_item_num("Ice Cream", 1, grocery_list))
+
