@@ -68,7 +68,7 @@ var grocery_list = {}
 
 function create_list(string, object) {
   var grocery_array = string.split(", ")
-  for(var i = 0; i < grocery_array.length; i++) {
+  for(var i in grocery_array) {
     grocery_list[grocery_array[i]] = 1;
   }
   return grocery_list;
