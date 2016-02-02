@@ -19,20 +19,62 @@
 -Create a function that will print out a clean list
 */
 
+//Initial Solution:
+
+// var grocery_list = {}
+
+
+// function create_list(string, object) {
+//   var grocery_array = string.split(", ")
+//   for(var i = 0; i < grocery_array.length; i++) {
+//     grocery_list[grocery_array[i]] = 1;
+//   }
+//   return grocery_list;
+// }
+
+
+// function add_item(item, quantity, object) {
+//   object[item] = quantity;
+//     return grocery_list;
+// }
+
+// function remove_item(item, object) {
+//   delete grocery_list[item];
+//   return grocery_list;
+// }
+
+// function update_item_num(item, quantity, object) {
+//   object[item] = quantity;
+//   return grocery_list;
+// }
+
+// function print_list(object) {
+//   return console.log(object);
+// }
+
+// create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list);
+// add_item("Lemonade", 2, grocery_list);
+// add_item("Tomatoes", 3, grocery_list);
+// add_item("Onions", 1, grocery_list);
+// add_item("Ice_Cream", 4, grocery_list);
+// remove_item("Lemonade", grocery_list);
+// update_item_num("Ice_Cream", 1, grocery_list);
+// print_list(grocery_list);
+
+//Refactored Solution:
 
 var grocery_list = {}
 
 
 function create_list(string, object) {
   var grocery_array = string.split(", ")
-  for(var i = 0; i < grocery_array.length; i++) {
+  for(var i in grocery_array) {
     grocery_list[grocery_array[i]] = 1;
   }
   return grocery_list;
 }
 
-
-function add_item(item, quantity, object) {
+function add_update(item, quantity, object) {
   object[item] = quantity;
     return grocery_list;
 }
@@ -42,22 +84,31 @@ function remove_item(item, object) {
   return grocery_list;
 }
 
-function update_item_num(item, quantity, object) {
-  object[item] = quantity;
-  return grocery_list;
-}
 
 function print_list(object) {
   return console.log(object);
 }
 
 create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list);
-add_item("Lemonade", 2, grocery_list);
-add_item("Tomatoes", 3, grocery_list);
-add_item("Onions", 1, grocery_list);
-add_item("Ice_Cream", 4, grocery_list);
+add_update("Lemonade", 2, grocery_list);
+add_update("Tomatoes", 3, grocery_list);
+add_update("Onions", 1, grocery_list);
+add_update("Ice_Cream", 4, grocery_list);
 remove_item("Lemonade", grocery_list);
-update_item_num("Ice_Cream", 1, grocery_list);
+add_update("Ice_Cream", 1, grocery_list);
 print_list(grocery_list);
 
+//Reflection:
+/*
+What concepts did you solidify in working on this challenge? (reviewing the passing 
+of information, objects, constructors, etc.)
+How to add, update, and remove properties from a javascript object.
 
+What was the most difficult part of this challenge?
+I did not have many problems creating a javascript solution for this challenge.
+
+Did an array or object make more sense to use and why?
+An object made the most sense because it contains property value pairs. This is 
+perfect for a grocery list with items and quantities since objects properties are 
+easy to add and update.
+*/
