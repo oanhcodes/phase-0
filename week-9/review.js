@@ -21,82 +21,82 @@
 
 //Initial Solution:
 
-// var grocery_list = {}
+// var groceryList = {}
 
 
-// function create_list(string, object) {
-//   var grocery_array = string.split(", ")
-//   for(var i = 0; i < grocery_array.length; i++) {
-//     grocery_list[grocery_array[i]] = 1;
+// function createList(string, object) {
+//   var groceryArray = string.split(", ")
+//   for(var i = 0; i < groceryArray.length; i++) {
+//     groceryList[groceryArray[i]] = 1;
 //   }
 //   return grocery_list;
 // }
 
 
-// function add_item(item, quantity, object) {
+// function addItem(item, quantity, object) {
 //   object[item] = quantity;
-//     return grocery_list;
+//     return groceryList;
 // }
 
-// function remove_item(item, object) {
-//   delete grocery_list[item];
-//   return grocery_list;
+// function removeItem(item, object) {
+//   delete groceryList[item];
+//   return groceryList;
 // }
 
-// function update_item_num(item, quantity, object) {
+// function updateItemNum(item, quantity, object) {
 //   object[item] = quantity;
-//   return grocery_list;
+//   return groceryList;
 // }
 
-// function print_list(object) {
+// function printList(object) {
 //   return console.log(object);
 // }
 
-// create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list);
-// add_item("Lemonade", 2, grocery_list);
-// add_item("Tomatoes", 3, grocery_list);
-// add_item("Onions", 1, grocery_list);
-// add_item("Ice_Cream", 4, grocery_list);
-// remove_item("Lemonade", grocery_list);
-// update_item_num("Ice_Cream", 1, grocery_list);
-// print_list(grocery_list);
+// createList("Apples, Bananas, Oranges, Bread, Milk", groceryList);
+// addItem("Lemonade", 2, groceryList);
+// addItem("Tomatoes", 3, groceryList);
+// addItem("Onions", 1, groceryList);
+// addItem("Ice_Cream", 4, groceryList;
+// removeItem("Lemonade", groceryList);
+// updateItemNum("Ice_Cream", 1, groceryList);
+// printList(groceryList);
 
 //Refactored Solution:
 
-var grocery_list = {}
+var groceryList = {}
 
 
-function create_list(string, object) {
-  var grocery_array = string.split(", ")
-  for(var i in grocery_array) {
-    grocery_list[grocery_array[i]] = 1;
+function createList(string, object) {
+  var groceryArray = string.split(", ")
+  for(var i in groceryArray) {
+    groceryList[groceryArray[i]] = 1;
   }
-  return grocery_list;
+  return groceryList;
 }
 
-function add_update(item, quantity, object) {
+function addUpdate(item, quantity, object) {
   object[item] = quantity;
-    return grocery_list;
+    return groceryList;
 }
 
-function remove_item(item, object) {
-  delete grocery_list[item];
-  return grocery_list;
+function removeItem(item, object) {
+  delete groceryList[item];
+  return groceryList;
 }
 
 
-function print_list(object) {
+function printList(object) {
   return console.log(object);
 }
 
-create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list);
-add_update("Lemonade", 2, grocery_list);
-add_update("Tomatoes", 3, grocery_list);
-add_update("Onions", 1, grocery_list);
-add_update("Ice_Cream", 4, grocery_list);
-remove_item("Lemonade", grocery_list);
-add_update("Ice_Cream", 1, grocery_list);
-print_list(grocery_list);
+createList("Apples, Bananas, Oranges, Bread, Milk", groceryList);
+addUpdate("Lemonade", 2, groceryList);
+addUpdate("Tomatoes", 3, groceryList);
+addUpdate("Onions", 1, groceryList);
+addUpdate("Ice_Cream", 4, groceryList);
+removeItem("Lemonade", groceryList);
+addUpdate("Ice_Cream", 1, groceryList);
+printList(groceryList);
 
 //Reflection:
 /*
