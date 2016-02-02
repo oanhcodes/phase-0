@@ -100,7 +100,15 @@ print_list(grocery_list);
 
 //Reflection:
 /*
-What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
+What concepts did you solidify in working on this challenge? (reviewing the passing 
+of information, objects, constructors, etc.)
+How to add, update, and remove properties from a javascript object.
+
 What was the most difficult part of this challenge?
+I did not have many problems creating a javascript solution for this challenge.
+
 Did an array or object make more sense to use and why?
+An object made the most sense because it contains property value pairs. This is 
+perfect for a grocery list with items and quantities since objects properties are 
+easy to add and update.
 */
