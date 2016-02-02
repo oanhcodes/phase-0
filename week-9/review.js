@@ -21,9 +21,20 @@
 
 var grocery_list = {}
 
-function make_list(item, quantity, object) {
+
+function create_list(string, object) {
+  var grocery_array = string.split(", ")
+  for(var i = 0; i < grocery_array.length; i++) {
+    grocery_list[grocery_array[i]] = 1;
+  }
+  return grocery_list;
+}
+
+
+function add_item(item, quantity, object) {
   object[item] = quantity;
     return grocery_list;
 }
 
-console.log(make_list("apples", 2, grocery_list));
+console.log(create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list))
+console.log(add_item("Chocolate", 2, grocery_list));
