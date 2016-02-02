@@ -18,3 +18,12 @@
 -Create a function that will update quantity of item on list
 -Create a function that will print out a clean list
 */
+
+var grocery_list = {}
+
+function make_list(item, quantity, object) {
+  object[item] = quantity;
+    return grocery_list;
+}
+
+console.log(make_list("apples", 2, grocery_list));
