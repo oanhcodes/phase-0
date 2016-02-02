@@ -19,6 +19,7 @@
 -Create a function that will print out a clean list
 */
 
+
 var grocery_list = {}
 
 
@@ -46,11 +47,17 @@ function update_item_num(item, quantity, object) {
   return grocery_list;
 }
 
-console.log(create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list));
-console.log(add_item("Lemonade", 2, grocery_list));
-console.log(add_item("Tomatoes", 3, grocery_list));
-console.log(add_item("Onions", 1, grocery_list));
-console.log(add_item("Ice Cream", 4, grocery_list));
-console.log(remove_item("Lemonade", grocery_list));
-console.log(update_item_num("Ice Cream", 1, grocery_list))
+function print_list(object) {
+  return console.log(object);
+}
+
+create_list("Apples, Bananas, Oranges, Bread, Milk", grocery_list);
+add_item("Lemonade", 2, grocery_list);
+add_item("Tomatoes", 3, grocery_list);
+add_item("Onions", 1, grocery_list);
+add_item("Ice_Cream", 4, grocery_list);
+remove_item("Lemonade", grocery_list);
+update_item_num("Ice_Cream", 1, grocery_list);
+print_list(grocery_list);
+
 
