@@ -18,39 +18,54 @@ Release 1:
 
 
 
+# Pseudocode
+=begin
+Release 1:
+-Define Student object 
+  -Assign first name and an array of 5 random scores 
+    -Scores should be assigned randomly between 0-100 to each student
+-Create an array with 5 instances of Student
+
+
+=end
+
+
+
 # Initial Solution
-students = []
+
+
 
 class Student
-  # attr_accessor :scores, :first_name
+  attr_accessor :scores, :first_name
 
-  def initialize(first_name, scores, array)   #Use named arguments!
+  def initialize(first_name, scores)   #Use named arguments!
     @first_name = first_name
-    @scores = scores
-    if @scores != [] 
-      array.push([first_name: @first_name, scores: @scores])
+    # @scores = scores
+    if scores != [] 
+      @scores = scores
     else
-      random_scores =[]
-        5.times { random_scores.push(rand(0..100))}
-      array.push([first_name: @first_name, scores: random_scores])
+    random_scores = []
+    5.times { random_scores.push(rand(0..100))}
+      @cores= random_scores
     end
   end
   
 end
 
-Alex = Student.new("Alex", [100,100,100,0,100], students)
-Catherine = Student.new("Catherine", [], students)
-Mollie = Student.new("Mollie", [], students)
-Linda = Student.new("Linda", [], students)
-Brad = Student.new("Brad", [], students)
+# random_scores =[]
+# 5.times { random_scores.push(rand(0..100))}
 
-p students
+Alex = Student.new("Alex", [100,100,100,0,100])
+Catherine = Student.new("Catherine", [])
+Mollie = Student.new("Mollie", [])
+Linda = Student.new("Linda", [])
+Brad = Student.new("Brad", [])
+
+students=[Alex, Catherine, Mollie, Linda,Brad]
 
 
+  
 # Refactored Solution
-
-
-
 
 
 
@@ -65,13 +80,13 @@ p students[0].scores[3] == 0
 
 # Additional Tests 1:
 
-p students[0].average == 80
-p students[0].letter_grade == 'B'
+# p students[0].average == 80
+# p students[0].letter_grade == 'B'
 
 # Additional Tests 2:
 
-p linear_search(students, "Alex") == 0
-p linear_search(students, "NOT A STUDENT") == -1
+# p linear_search(students, "Alex") == 0
+# p linear_search(students, "NOT A STUDENT") == -1
 
 
 
