@@ -13,18 +13,10 @@ Release 1:
     -Scores should be assigned randomly between 0-100 to each student
 -Create an array with 5 instances of Student
 
-
-=end
-
-
-
-# Pseudocode
-=begin
-Release 1:
--Define Student object 
-  -Assign first name and an array of 5 random scores 
-    -Scores should be assigned randomly between 0-100 to each student
--Create an array with 5 instances of Student
+Release 2:
+-Find average grade for each student
+-Assign letter grade based off of each average
+  (A for >=90%, B for >=80%, C for >= 70%, D for >= 60% and F for < 60%)
 
 
 =end
@@ -33,14 +25,11 @@ Release 1:
 
 # Initial Solution
 
-
-
 class Student
   attr_accessor :scores, :first_name
 
   def initialize(first_name, scores)   #Use named arguments!
     @first_name = first_name
-    # @scores = scores
     if scores != [] 
       @scores = scores
     else
@@ -50,10 +39,25 @@ class Student
     end
   end
   
+  def average
+    @scores.inject(0){|sum,x| sum+x} / @scores.length
+  end
+  
+  def letter_grade
+    if average >= 90 
+      "A"
+    elsif average < 89 && average >=80 
+      "B"
+    elsif average < 79 && average >=70
+      "C"
+    elsif average < 69 && average >=60
+      "D"
+    else
+      "F"
+    end
+  end
+  
 end
-
-# random_scores =[]
-# 5.times { random_scores.push(rand(0..100))}
 
 Alex = Student.new("Alex", [100,100,100,0,100])
 Catherine = Student.new("Catherine", [])
@@ -61,8 +65,7 @@ Mollie = Student.new("Mollie", [])
 Linda = Student.new("Linda", [])
 Brad = Student.new("Brad", [])
 
-students=[Alex, Catherine, Mollie, Linda,Brad]
-
+students=[Alex, Catherine, Mollie, Linda, Brad]
 
   
 # Refactored Solution
@@ -80,8 +83,8 @@ p students[0].scores[3] == 0
 
 # Additional Tests 1:
 
-# p students[0].average == 80
-# p students[0].letter_grade == 'B'
+p students[0].average == 80
+p students[0].letter_grade == 'B'
 
 # Additional Tests 2:
 
