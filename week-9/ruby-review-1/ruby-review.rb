@@ -18,6 +18,10 @@ Release 2:
 -Assign letter grade based off of each average
   (A for >=90%, B for >=80%, C for >= 70%, D for >= 60% and F for < 60%)
 
+Release 3:
+-Define a method for linear search
+  -IF a student is in the array, return the student's position in the array
+  -ELSE if the student is not in the array, return -1
 
 =end
 
@@ -35,7 +39,7 @@ class Student
     else
     random_scores = []
     5.times { random_scores.push(rand(0..100))}
-      @cores= random_scores
+      @scores= random_scores
     end
   end
   
@@ -56,8 +60,9 @@ class Student
       "F"
     end
   end
-  
+
 end
+
 
 Alex = Student.new("Alex", [100,100,100,0,100])
 Catherine = Student.new("Catherine", [])
@@ -67,6 +72,16 @@ Brad = Student.new("Brad", [])
 
 students=[Alex, Catherine, Mollie, Linda, Brad]
 
+
+def linear_search(array, target_name)
+  array.each_with_index do |item, index|
+    if item.first_name == target_name
+      return index
+    else
+      return-1
+    end
+  end
+end
   
 # Refactored Solution
 
@@ -88,11 +103,8 @@ p students[0].letter_grade == 'B'
 
 # Additional Tests 2:
 
-# p linear_search(students, "Alex") == 0
-# p linear_search(students, "NOT A STUDENT") == -1
-
-
-
+p linear_search(students, "Alex") == 0
+p linear_search(students, "NOT A STUDENT") == -1
 
 
 # Reflection
