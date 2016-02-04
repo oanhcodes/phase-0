@@ -22,17 +22,73 @@ single_digit = {0 => "Zero", 1 => "One", 2 => "Two", 3 => "Three", 4 => "Four", 
   
 teens = {0 => "Ten", 1 => "Eleven", 2 => "Twelve", 3 => "Thirteen", 4 => "Fourteen", 5 => "Fifteen", 6 => "Sixteen", 7 => "Seventeen", 8 => "Eighteen", 9 => "Nineteen"}
   
-tenths= {2 => "Twenty", 3 => "Thirty", 4 => "Fourty", 5 => "Fifty", 6 => "Sixty", 7 => "Seventy", 8 => "Eighty", 9 => "Ninety"}
+tenths = {2 => "Twenty", 3 => "Thirty", 4 => "Fourty", 5 => "Fifty", 6 => "Sixty", 7 => "Seventy", 8 => "Eighty", 9 => "Ninety"}
+
+hundreds = {3 => "Hundred", 4 => "Thousand"}
 
   
  digits = integer.to_s.split("")
  
  if digits.length < 2
   p single_digit[integer]
- else
+ elsif digits.length == 2
    if digits[0] == "1"
      p teens[digits[1].to_i]
+   elsif digits[0] == "2"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "3"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "4"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "5"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "6"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "7"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "8"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
+   elsif digits[0] == "9"
+     unless digits[1] =="0"
+     p tenths[digits[0].to_i] + " " + single_digit[digits[1].to_i]
+     else
+     p tenths[digits[0].to_i]
+     end
    end
+ else digits.length == 3
+   # unless digits[1] == 0 && digits[2] == 0
+     p single_digit[digits[0].to_i] + " " + hundreds[digits.length] + " and" + " " + tenths[digits[1].to_i] + " " + single_digit[digits[2].to_i]
+   # else 
+   #   p single_digit[digits[0].to_i] + " " + hundreds[digits.length]
+   # end
  end
    
 end
@@ -42,6 +98,16 @@ end
 in_words(1)
 in_words(10)
 in_words(14)
+in_words(20)
+in_words(31)
+in_words(48)
+in_words(53)
+in_words(60)
+in_words(77)
+in_words(82)
+in_words(95)
+in_words(124)
+in_words(224)
 # Refactored Solution
 
 
