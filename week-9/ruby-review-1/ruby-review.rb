@@ -1,8 +1,8 @@
 # OO Basics: Student
 
 
-# I worked on this challenge [by myself, with: ].
-# This challenge took me [#] hours.
+# I worked on this challenge with Mollie Stein.
+# This challenge took me [5] hours.
 
 
 # Pseudocode
@@ -106,5 +106,3 @@ p students[0].letter_grade == 'B'
 p linear_search(students, "Alex") == 0
 p linear_search(students, "NOT A STUDENT") == -1
 
-
-# Reflection
