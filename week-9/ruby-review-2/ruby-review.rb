@@ -24,7 +24,7 @@ teens = {0 => "Ten", 1 => "Eleven", 2 => "Twelve", 3 => "Thirteen", 4 => "Fourte
   
 tenths = {2 => "Twenty", 3 => "Thirty", 4 => "Fourty", 5 => "Fifty", 6 => "Sixty", 7 => "Seventy", 8 => "Eighty", 9 => "Ninety"}
 
-hundreds = {3 => "Hundred", 4 => "Thousand"}
+hundreds = {3 => "Hundred"}
 
   
  digits = integer.to_s.split("")
@@ -84,11 +84,17 @@ hundreds = {3 => "Hundred", 4 => "Thousand"}
      end
    end
  else digits.length == 3
-   # unless digits[1] == 0 && digits[2] == 0
-     p single_digit[digits[0].to_i] + " " + hundreds[digits.length] + " and" + " " + tenths[digits[1].to_i] + " " + single_digit[digits[2].to_i]
-   # else 
-   #   p single_digit[digits[0].to_i] + " " + hundreds[digits.length]
-   # end
+   if digits[1].to_i >= 2
+     unless digits[2] == "0"
+     p single_digit[digits[0].to_i] + " " + hundreds[digits.length] + " " + tenths[digits[1].to_i] + " " + single_digit[digits[2].to_i]
+     else
+     p single_digit[digits[0].to_i] + " " + hundreds[digits.length] + " " + tenths[digits[1].to_i]
+     end
+   elsif digits[1].to_i == 1
+    p single_digit[digits[0].to_i] + " " + hundreds[digits.length] + " " + teens[digits[2].to_i]
+   else
+    p single_digit[digits[0].to_i] + " " + hundreds[digits.length]
+   end
  end
    
 end
@@ -97,17 +103,19 @@ end
 
 in_words(1)
 in_words(10)
-in_words(14)
-in_words(20)
-in_words(31)
-in_words(48)
 in_words(53)
 in_words(60)
 in_words(77)
 in_words(82)
 in_words(95)
+in_words(112)
 in_words(124)
 in_words(224)
+in_words(135)
+in_words(595)
+in_words(780)
+in_words(100)
+
 # Refactored Solution
 
 
