@@ -106,3 +106,20 @@ p students[0].letter_grade == 'B'
 p linear_search(students, "Alex") == 0
 p linear_search(students, "NOT A STUDENT") == -1
 
+
+=begin
+Reflection:
+In the reflection section in your ruby_review.rb file, answer the following 
+questions:
+
+What concepts did you review in this challenge?
+How to define a object with Ruby classes and attribute accessors.
+
+What is still confusing to you about Ruby?
+Attribute accessors and symbols.
+
+What are you going to study to get more prepared for Phase 1?  
+I need to review Ruby classes, accessors, and instance variables.
+  
+=end
+
