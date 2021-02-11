@@ -27,7 +27,7 @@ Release 3:
 
 
 
-# Initial Solution
+# Initial Solution ##
 
 class Student
   attr_accessor :scores, :first_name
